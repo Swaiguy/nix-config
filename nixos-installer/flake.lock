@@ -15,6 +15,25 @@
         "type": "github"
       }
     },
+    "nuenv": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_8",
+        "rust-overlay": "rust-overlay_3"
+      },
+      "locked": {
+        "lastModified": 1714761851,
+        "narHash": "sha256-I0xDxQddlCT+R+YkLxg6eRSceFSCQFz8RL1clqKkr0g=",
+        "owner": "DeterminateSystems",
+        "repo": "nuenv",
+        "rev": "970bfd5321a5ff55135993f956aa7ad445778151",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DeterminateSystems",
+        "repo": "nuenv",
+        "type": "github"
+      }
+    },
     "nixos-hardware": {
       "locked": {
         "lastModified": 1721413321,
