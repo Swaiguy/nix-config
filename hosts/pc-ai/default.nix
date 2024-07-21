@@ -13,7 +13,7 @@ in {
     ./hardware-configuration.nix
 
     ./impermanence.nix
-    ./secureboot.nix
+    ##For Laptops Only ./secureboot.nix
   ];
 
   networking = {
