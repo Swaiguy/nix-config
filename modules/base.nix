@@ -11,10 +11,9 @@
     ++ (import ../overlays args);
 
   # Add my private PKI's CA certificate to the system-wide trust store.
-  ##This Is A Dependency for somethings... Should'nt cause problems for now
   ##security.pki.certificateFiles = [
-    #../certs/ecc-ca.crt
-  #];
+    ##../certs/ecc-ca.crt
+  ##];
 
   # auto upgrade nix to the unstable version
   # https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/tools/package-management/nix/default.nix#L284
@@ -60,7 +59,7 @@
   ];
 
   users.users.${myvars.username} = {
-    description = myvars.userfullname;
+    description = "kry"; ##myvars.userfullname
     # Public Keys that can be used to login to all my PCs, Macbooks, and servers.
     #
     # Since its authority is so large, we must strengthen its security:
