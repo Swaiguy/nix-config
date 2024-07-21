@@ -801,13 +801,18 @@
     "mysecrets": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-+xExlxx6fLu09jkGRF4C++6SUqfZ3VVsz5P0qHuxQDw=",
+        "lastModified": 1712114794,
+        "narHash": "sha256-efxgifyMYlyM500gBqF8Wh6NeblO4lQvj++W/SIJlcA=",
+        "ref": "refs/heads/main",
+        "rev": "f2c131775b72bf0af9a3c26350dc8fa3cf8a4abb",
+        "shallow": true,
         "type": "git",
-        "url": "https://git@github.com/Swaiguy/nix-secrets.git?shallow=1"
+        "url": "ssh://git@github.com/Swaiguy/nix-secrets.git"
       },
       "original": {
+        "shallow": true,
         "type": "git",
-        "url": "https://git@github.com/Swaiguy/nix-secrets.git?shallow=1"
+        "url": "ssh://git@github.com/Swaiguy/nix-secrets.git"
       }
     },
     "nix-darwin": {
