@@ -1,5 +1,5 @@
 {lib}: rec {
-  mainGateway = "192.168.18.15"; # main router
+  networking.mainGateway = "192.168.18.15"; # main router
   # use suzi as the default gateway
   # it's a subrouter with a transparent proxy
   defaultGateway = "192.168.18.1";
@@ -9,7 +9,7 @@
   ];
   prefixLength = 24;
 
-  hostsAddr = {
+  networking.hostsAddr = {
     # ============================================
     # Homelab's Physical Machines (KubeVirt Nodes)
     # ============================================
@@ -136,7 +136,7 @@
     };
   };
 
-  hostsInterface =
+  networking.hostsInterface =
     lib.attrsets.mapAttrs
     (
       key: val: {
@@ -151,7 +151,7 @@
         };
       }
     )
-    hostsAddr;
+    networking.hostsAddr;
 
   ssh = {
     # define the host alias for remote builders
@@ -176,7 +176,7 @@
             Port 22
         '')
       ""
-      hostsAddr;
+      networking.hostsAddr;
 
     # define the host key for remote builders so that nix can verify all the remote builders
     # this config will be written to /etc/ssh/ssh_known_hosts
@@ -189,7 +189,7 @@
       #     => { x = "bar-a"; y = "bar-b"; }
       lib.attrsets.mapAttrs
       (host: value: {
-        hostNames = [host hostsAddr.${host}.ipv4];
+        hostNames = [host networking.hostsAddr.${host}.ipv4];
         publicKey = value.publicKey;
       })
       {

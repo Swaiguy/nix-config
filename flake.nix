@@ -51,7 +51,7 @@
     # home-manager, used for managing user configuration
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
-      # url = "github:nix-community/home-manager/master";
+      #url = "github:nix-community/home-manager/master";
 
       # The `follows` keyword in inputs is used for inheritance.
       # Here, `inputs.nixpkgs` of home-manager is kept consistent with the `inputs.nixpkgs` of the current flake,
@@ -155,10 +155,10 @@
     };
 
     # riscv64 SBCs
-   ## nixos-licheepi4a.url = "github:ryan4yin/nixos-licheepi4a";
+    nixos-licheepi4a.url = "github:ryan4yin/nixos-licheepi4a";
     # nixos-jh7110.url = "github:ryan4yin/nixos-jh7110";
 
     # aarch64 SBCs
-   ## nixos-rk3588.url = "github:ryan4yin/nixos-rk3588";
+    nixos-rk3588.url = "github:ryan4yin/nixos-rk3588";
   };
 }
