@@ -20,8 +20,10 @@
     enable = true;
     lfs.enable = true;
 
-    userName = myvars.userfullname;
-    userEmail = myvars.useremail;
+    ##userName = myvars.userfullname; Somethings wrong with myvars on base.nix so this is a precorsion
+    ##userEmail = myvars.useremail;
+    userName = "Swaiguy";
+    userEmail = "xtrasodiumchloride2@gmail.com";
 
     includes = [
       {
@@ -39,8 +41,8 @@
 
       # replace https with ssh
       url = {
-        "ssh://git@github.com/ryan4yin" = {
-          insteadOf = "https://github.com/ryan4yin";
+        "ssh://git@github.com/Swaiguy" = {
+          insteadOf = "https://github.com/Swaiguy";
         };
         # "ssh://git@gitlab.com/" = {
         #   insteadOf = "https://gitlab.com/";
