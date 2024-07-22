@@ -88,7 +88,7 @@ plugin.
 ### Window Navigation
 
 - Switch between windows: `<Ctrl> + h/j/k/l`
-- Resize windows: `<Ctrl> + Up/Down/Left/Right` (`<Ctrl-w> + -/+/</>`)
+- Resize windows: `<Ctrl> + Up/Down/Left/Right`
   - Note: On macOS, conflicts with system shortcuts
   - Disable in System Preferences -> Keyboard -> Shortcuts -> Mission Control
 
@@ -159,11 +159,10 @@ Provided by mini.surround plugin.
 
 ### Miscellaneous
 
-| Action                            |                 |
-| --------------------------------- | --------------- |
-| Show all Yank History             | `:<Space> + yh` |
-| Show undo history                 | `:<Space> + uh` |
-| Show the path of the current file | `:!echo $%`      |
+| Action                |                 |
+| --------------------- | --------------- |
+| Show all Yank History | `:<Space> + yh` |
+| Show undo history     | `:<Space> + uh` |
 
 ## Additional Resources
 

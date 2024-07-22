@@ -3,11 +3,6 @@
 ---@type LazySpec
 return {
   "nvim-treesitter/nvim-treesitter",
-  dependencies = {
-    -- NOTE: additional parser
-    { "nushell/tree-sitter-nu" },
-    { "IndianBoy42/tree-sitter-just" },
-  },
   opts = function(_, opts)
     opts.incremental_selection = {
       enable = true,
@@ -18,7 +13,7 @@ return {
         node_decremental = "<bs>", -- Backspace
       },
     }
-    opts.ignore_install = { "gotmpl", "wing" }
+    opts.ignore_install = { "gotmpl" }
 
     -- add more things to the ensure_installed table protecting against community packs modifying it
     opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {

@@ -1,4 +1,4 @@
-{pkgs-unstable, ...}: let
+let
   shellAliases = {
     k = "kubectl";
 
@@ -11,7 +11,6 @@ in {
 
   programs.nushell = {
     enable = true;
-    package = pkgs-unstable.nushell;
     configFile.source = ./config.nu;
     inherit shellAliases;
   };

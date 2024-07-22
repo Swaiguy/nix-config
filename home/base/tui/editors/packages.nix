@@ -75,7 +75,6 @@
     gradle
     maven
     spring-boot-cli
-    jdt-language-server
 
     #-- lua
     stylua

@@ -1,5 +1,5 @@
 {mysecrets, ...}: {
-  home.file.".ssh/remote.pub".source = "${mysecrets}"; ##mysecrets}/your/directory/remote.pub (RYANS = ROMANTIC.PUB)
+  home.file.".ssh/romantic.pub".source = "${mysecrets}/public/romantic.pub";
 
   programs.ssh = {
     enable = true;
@@ -20,8 +20,7 @@
         # It has the same effect as adding cli option `ssh -A user@host`
         ForwardAgent yes
         # romantic holds my homelab~
-      ##NOW MINE!!
-        IdentityFile /etc/agenix/ssh-key-remote
+        IdentityFile /etc/agenix/ssh-key-romantic
         # Specifies that ssh should only use the identity file explicitly configured above
         # required to prevent sending default identity files first.
         IdentitiesOnly yes
