@@ -11,9 +11,9 @@
     ++ (import ../overlays args);
 
   # Add my private PKI's CA certificate to the system-wide trust store.
-  ##security.pki.certificateFiles = [
-    ##../certs/ecc-ca.crt
-  ##];
+  security.pki.certificateFiles = [
+    ../certs/ecc-ca.crt
+  ];
 
   # auto upgrade nix to the unstable version
   # https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/tools/package-management/nix/default.nix#L284
@@ -59,7 +59,7 @@
   ];
 
   users.users.${myvars.username} = {
-    description = "kry"; ##myvars.userfullname
+    description = myvars.userfullname;
     # Public Keys that can be used to login to all my PCs, Macbooks, and servers.
     #
     # Since its authority is so large, we must strengthen its security:
@@ -73,9 +73,9 @@
     #    2. Never leave the device and never sent over the network.
     # 2. Or just use hardware security keys like Yubikey/CanoKey.
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIKlN+Q/GxvwxDX/OAjJHaNFEznEN4Tw4E4TwqQu/eD6 kry@pc-ai"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPoa9uEI/gR5+klqTQwvCgD6CD5vT5iD9YCNx2xNrH3B kry@fern"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPwZ9MdotnyhxIJrI4gmVshExHiZOx+FGFhcW7BaYkfR kry@harmonica"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIKlN+Q/GxvwxDX/OAjJHaNFEznEN4Tw4E4TwqQu/eD6 ryan@idols-ai"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPoa9uEI/gR5+klqTQwvCgD6CD5vT5iD9YCNx2xNrH3B ryan@fern"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPwZ9MdotnyhxIJrI4gmVshExHiZOx+FGFhcW7BaYkfR ryan@harmonica"
     ];
   };
 

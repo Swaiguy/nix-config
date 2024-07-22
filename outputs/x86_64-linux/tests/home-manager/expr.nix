@@ -5,6 +5,7 @@
 }: let
   username = myvars.username;
   hosts = [
+    "pc-ai"
     "ai-hyprland"
     "ai-i3"
     "shoukei-hyprland"
