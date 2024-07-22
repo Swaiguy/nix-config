@@ -841,7 +841,7 @@
     "mysecrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1712114794,
+        "lastModified": 1712114796,
         "narHash": "sha256-efxgifyMYlyM500gBqF8Wh6NeblO4lQvj++W/SIJlcA=",
         "ref": "refs/heads/main",
         "rev": "d362ac03c9169189795191d9b189e27bbb39b016",
