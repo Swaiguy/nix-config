@@ -1,0 +1,3 @@
+# Idols - Kana
+
+TODO
