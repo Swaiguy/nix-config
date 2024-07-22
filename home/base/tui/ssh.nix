@@ -1,6 +1,6 @@
 {mysecrets, ...}: {
-  home.file.".ssh/romantic.pub".source = "${mysecrets}/public/romantic.pub";
-
+  home.file.".ssh/remote.pub".source = "${mysecrets}";
+  ##"${mysecrets}/public/romantic.pub";
   programs.ssh = {
     enable = true;
 
