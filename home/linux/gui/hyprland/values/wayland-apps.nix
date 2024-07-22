@@ -83,14 +83,14 @@
               "--password-store=gnome" # use gnome-keyring as password store
             ];
           })
-        .overrideAttrs (oldAttrs: rec {
+        ##.overrideAttrs (oldAttrs: rec {
           # Use VSCode Insiders to fix crash: https://github.com/NixOS/nixpkgs/issues/246509
-          src = builtins.fetchTarball {
-            url = "https://update.code.visualstudio.com/latest/linux-x64/insider";
-            sha256 = "16ij15mdrqi0k0nqcpfl5vvyf623amhvmka58jxa9a7vncji707v";
-          };
-          version = "latest";
-        });
+        #  src = builtins.fetchTarball {
+         #   url = "https://update.code.visualstudio.com/latest/linux-x64/insider";
+          #  sha256 = "16ij15mdrqi0k0nqcpfl5vvyf623amhvmka58jxa9a7vncji707v";
+        #  };
+        #  version = "latest";
+      #  });
     };
   };
 }
