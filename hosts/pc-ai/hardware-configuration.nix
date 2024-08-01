@@ -1,6 +1,5 @@
 ## ADAPT UUID PATHS ~ CHANGE UUID TO CURRENT CONFIG
-#
-#
+
 {
   config,
   lib,
@@ -48,7 +47,7 @@
     luks.devices."crypted-nixos" = {
       # NOTE: DO NOT use device name here(like /dev/sda, /dev/nvme0n1p2, etc), use UUID instead.
       # https://github.com/ryan4yin/nix-config/issues/43
-      device = "/dev/disk/by-uuid/3e992770-e284-48e9-b4ff-610ae3e9e2e6";
+      device = "/dev/disk/by-uuid/6e6cac08-dd64-400f-82ec-9d5428f19d4c";
       # the keyfile(or device partition) that should be used as the decryption key for the encrypted device.
       # if not specified, you will be prompted for a passphrase instead.
       #keyFile = "/root-part.key";
@@ -64,7 +63,7 @@
   };
 
   fileSystems."/btr_pool" = {
-    device = "/dev/disk/by-uuid/d850e756-cea8-4cc3-b3c1-19e9c3707eb1";
+    device = "/dev/disk/by-uuid/c9adb278-cc7c-47fb-9136-88a3816c88e1";
     fsType = "btrfs";
     # btrfs's top-level subvolume, internally has an id 5
     # we can access all other subvolumes from this subvolume.
@@ -81,20 +80,20 @@
   };
 
   fileSystems."/nix" = {
-    device = "/dev/disk/by-uuid/d850e756-cea8-4cc3-b3c1-19e9c3707eb1";
+    device = "/dev/disk/by-uuid/c9adb278-cc7c-47fb-9136-88a3816c88e1";
     fsType = "btrfs";
     options = ["subvol=@nix" "noatime" "compress-force=zstd:1"];
   };
 
   # for guix store, which use `/gnu/store` as its store directory.
   fileSystems."/gnu" = {
-    device = "/dev/disk/by-uuid/d850e756-cea8-4cc3-b3c1-19e9c3707eb1";
+    device = "/dev/disk/by-uuid/c9adb278-cc7c-47fb-9136-88a3816c88e1";
     fsType = "btrfs";
     options = ["subvol=@guix" "noatime" "compress-force=zstd:1"];
   };
 
   fileSystems."/persistent" = {
-    device = "/dev/disk/by-uuid/d850e756-cea8-4cc3-b3c1-19e9c3707eb1";
+    device = "/dev/disk/by-uuid/c9adb278-cc7c-47fb-9136-88a3816c88e1";
     fsType = "btrfs";
     options = ["subvol=@persistent" "compress-force=zstd:1"];
     # impermanence's data is required for booting.
@@ -102,20 +101,20 @@
   };
 
   fileSystems."/snapshots" = {
-    device = "/dev/disk/by-uuid/d850e756-cea8-4cc3-b3c1-19e9c3707eb1";
+    device = "/dev/disk/by-uuid/c9adb278-cc7c-47fb-9136-88a3816c88e1";
     fsType = "btrfs";
     options = ["subvol=@snapshots" "compress-force=zstd:1"];
   };
 
   fileSystems."/tmp" = {
-    device = "/dev/disk/by-uuid/d850e756-cea8-4cc3-b3c1-19e9c3707eb1";
+    device = "/dev/disk/by-uuid/c9adb278-cc7c-47fb-9136-88a3816c88e1";
     fsType = "btrfs";
     options = ["subvol=@tmp" "compress-force=zstd:1"];
   };
 
   # mount swap subvolume in readonly mode.
   fileSystems."/swap" = {
-    device = "/dev/disk/by-uuid/d850e756-cea8-4cc3-b3c1-19e9c3707eb1";
+    device = "/dev/disk/by-uuid/c9adb278-cc7c-47fb-9136-88a3816c88e1";
     fsType = "btrfs";
     options = ["subvol=@swap" "ro"];
   };
@@ -131,7 +130,7 @@
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/E82A-9854";
+    device = "/dev/disk/by-uuid/BB3C-36D2";
     fsType = "vfat";
   };
 
@@ -148,6 +147,5 @@
   # networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
