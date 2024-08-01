@@ -1,5 +1,5 @@
 {lib}: rec {
-  networking.mainGateway = "192.168.18.15"; # main router
+  networking.mainGateway = "192.168.18.1"; # main router
   # use suzi as the default gateway
   # it's a subrouter with a transparent proxy
   defaultGateway = "192.168.18.1";
