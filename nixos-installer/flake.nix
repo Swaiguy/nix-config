@@ -11,12 +11,13 @@
   outputs = inputs @ {
     nixpkgs,
     nixos-hardware,
+    nuenv,
     ...
   }: {
     nixosConfigurations = {
       ai = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = inputs // {myvars.username = "kry";};
+        specialArgs = inputs // {myvars.username = "kry";  myvars.userfullname = "The Individual Known As"; };
         modules = [
           {networking.hostName = "pc";}
 
