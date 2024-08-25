@@ -123,7 +123,7 @@ fileSystems."/btr_pool" = {
   fileSystems."/boot/efi" =
     { device = "/dev/disk/by-uuid/51DE-D2B6";
       fsType = "vfat";
-      options = [ "fmask=0022" "dmask=0022" ];
+      options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices = [
