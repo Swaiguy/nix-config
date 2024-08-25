@@ -82,7 +82,7 @@
               # still not works...
               "--password-store=gnome" # use gnome-keyring as password store
             ];
-          })
+          });
         ##.overrideAttrs (oldAttrs: rec {
           # Use VSCode Insiders to fix crash: https://github.com/NixOS/nixpkgs/issues/246509
         #  src = builtins.fetchTarball {
